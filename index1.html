@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript exemples</title>
+  </head>
+  
+  <body>
+    <h1>Hello javascript</h1>
+
+    <p id="coffe">the coffe is ...</p>
+
+    <button type="button" onclick="test()">click here !</button>
+    <button type="button" onclick="test1()">click here to close  !</button>
+
+    <script>
+        function test() {
+          document.getElementById("coffe").innerHTML = "the coffee  is open";
+        }
+
+        function test1() {
+          document.getElementById("coffe").innerHTML = "the coffee is closed";
+        }
+
+
+
+
+
+/*variable*/
+
+// var name = "rami";
+// var age = 27;
+
+/*let*/
+// if(true){
+
+// let user = "alex";
+// let ageUser = 30;
+// console.log(user , ageUser );
+// }
+// console.log(name , age );
+
+
+/*const*/
+// const username = "mark";
+// username = "amine";
+
+// console.log(username);
+
+/*manipulation une table */
+
+
+/*afficher un element de table*/
+var fruits=["ananas" , "banane" , "orange"];
+var fruit = fruits[0];
+console.log(fruit);
+
+/*ajouter un element au debut du table*/
+console.log(fruits.unshift("tomate" , "fraise"));
+console.log(fruits);
+
+/*concatiner deux table*/
+var fruits1 = ["car" , "bike" , "train"]
+var array = fruits.concat(fruits1);
+console.log(array);
+
+/*ajouter un element a la fin  du table*/
+var count = fruits.push("moto" , "phone");
+
+console.log(fruits);
+console.log(count); //7
+
+/*table dans un table */
+
+
+
+var fruits=["ananas" , "banane" , "orange", ["name" , "username"]];
+var longueur = fruits.length;
+console.log("la longueur du table est" , longueur);
+var element = fruits[3][1];
+console.log(element);
+
+/*map sur un table */
+
+var table = [5 , 6 ,1 ,3];
+const result = table.map((t)=> t*2);
+
+console.log(result);
+
+
+
+
+
+/*javascript event*/
+
+
+      </script>
+
+
+<!-- exmple sur le console
+
+
+window.alert('this is an alert !')
+window.confirm ('are your sure to delete this statement !') -->
+
+  </body>
+
+</html>
+
+

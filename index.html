@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Your Site</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<!-- START NAV -->
+
+<nav id="navbar" class="nav">
+  <div>
+    <h1 class="logo">PortFolio</h1>
+  </div>
+
+  <ul class="nav-list">
+    <li>
+      <a href="#welcome-section">About</a>
+    </li>
+    <li>
+      <a href="#projects">Work</a>
+    </li>
+    <li>
+      <a href="#contact">Contact</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- END NAV -->
+
+<!-- START WELCOME SECTION -->
+
+<section id="welcome-section" class="welcome-section">
+  <h1>Hello Fsm Club &#128512;</h1>
+  <p>Welcome Every Body </p>
+</section>
+
+<!-- END WELCOME SECTION -->
+
+<!-- START PROJECTS SECTION -->
+
+<section id="projects" class="projects-section">
+  <h2 class="projects-section-header">These are some of my projects</h2>
+
+  <div class="projects-grid">
+    <a href="https://google.com/" target="_blank" class="project project-tile">
+      <img class="project-image" src="images/project.jpg" alt="project" />
+      <p class="project-title">
+        <span class="code">&lt;</span>
+        Tribute Page
+        <span class="code">&#47;&gt;</span>
+      </p>
+    </a>
+    <a href="https://google.com/" target="_blank" class="project project-tile">
+      <img class="project-image" src="images/project.jpg" width="86" height="37" alt="project" />
+      <p class="project-title">
+        <span class="code">&lt;</span>
+        Random Quote Machine
+        <span class="code">&#47;&gt;</span>
+      </p>
+    </a>
+    <a href="https://google.com/" target="_blank" class="project project-tile">
+      <img class="project-image" src="images/project.jpg" alt="project" />
+      <p class="project-title">
+        <span class="code">&lt;</span>
+        JavaScript Calculator
+        <span class="code">&#47;&gt;</span>
+      </p>
+    </a>
+    <a href="https://google.com/" target="_blank" class="project project-tile">
+      <img class="project-image" src="images/project.jpg" alt="project" />
+      <p class="project-title">
+        <span class="code">&lt;</span>
+        Map Data Across the Globe
+        <span class="code">&#47;&gt;</span>
+      </p>
+    </a>
+    <a href="https://google.com/" target="_blank" class="project project-tile">
+      <img class="project-image" src="images/teaching.png" alt="project" />
+      <p class="project-title">
+        <span class="code">&lt;</span>
+        Wikipedia Viewer
+        <span class="code">&#47;&gt;</span>
+      </p>
+    </a>
+    <a href="https://google.com/" target="_blank" class="project project-tile">
+      <img class="project-image" src="images/project.jpg" alt="project" />
+      <p class="project-title">
+        <span class="code">&lt;</span>
+        Tic Tac Toe Game
+        <span class="code">&#47;&gt;</span>
+      </p>
+    </a>
+  </div>
+
+  <button onclick="showAlert()" class="btn btn-show-all">Show all</button>
+</section>
+
+
+<!-- END PROJECTS SECTION -->
+
+<!-- START CONTACT SECTION -->
+
+<section id="contact" class="contact-section">
+  <div class="contact-section-header">
+    <h2>Let's work together...</h2>
+    <p>How do you take your coffee?</p>
+  </div>
+  <div class="contact-links">
+    <a href="#" target="_blank" class="btn contact-details"><i class="fab fa-facebook-square"></i> Facebook</a>
+    <a id="profile-link" href="#" target="_blank" class="btn contact-details"><i class="fab fa-github"></i> GitHub</a>
+    <a href="https://twitter.com/" target="_blank" class="btn contact-details"><i class="fab fa-twitter"></i>
+      Twitter</a>
+    <a href="#" class="btn contact-details"><i class="fas fa-at"></i> Send a mail</a>
+    <a href="#" class="btn contact-details"><i class="fas fa-mobile-alt"></i> Call me</a>
+
+  </div>
+
+  <button id="up"
+style="
+ background-color:rgb(165, 56, 56);
+ border:none;
+ color:white;
+ font-weight:bold;
+ padding:6px;
+ border-radius : 10px;
+ position:fixed;
+ bottom: 20px;
+ right:20px;
+ cursor:pointer ;
+ display:none;
+"
+
+
+>Up</button>
+
+</section>
+
+<!-- END CONTACT SECTION -->
+
+<!-- START FOOTER SECTION -->
+
+<footer>
+  <p>
+    **This is just a fake portfolio. All the projects and contact details given
+    are not real.
+  </p>
+  <p>
+    &copy; Created for
+    <a href="https://google.com" target="_blank">freeCoding <i class="fab fa-free-code-camp"></i></a>
+  </p>
+</footer>
+
+<!-- END FOOTER SECTION -->
+
+
+
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Powered by <a href="https://ramijawadi.netlify.app" title="W3.CSS" target="_blank" class="w3-hover-text-green">FSM
+      CLUB</a></p>
+</footer>
+
+
+<!-- <script>
+  function showAlert() {
+    alert ("Hello world!");
+  }
+
+
+</script> -->
+
+<script>
+
+let btn = document.getElementById("up");
+
+/*si hauteur >= 900 px le bouton apparait dans l ecran*/
+
+
+window.onscroll = function () {
+
+  if(window.scrollY >= 900){
+
+    btn.style.display = "block";
+  }else 
+  btn.style.display = "none";
+}
+
+
+/*scroller ver le haut si on click */
+btn.onclick = function () {
+  window.scrollTo ({
+
+    left: 0 ,
+    top:0 ,
+    behavior : "smooth",
+  })
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
