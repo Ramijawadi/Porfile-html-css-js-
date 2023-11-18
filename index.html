@@ -8,12 +8,24 @@
 
 </head>
 
+<style>
+  .alert {
+      padding: 20px;
+      background-color: #f44336;
+      color: white;
+  }
+
+  </style>
+
+
 <link rel="stylesheet" type="text/css" href="style.css">
 <!-- START NAV -->
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- link font awesome icon-->
 <nav id="navbar" class="nav">
   <div>
-    <h1 class="logo">PortFolio</h1>
+    <a class="logo"  href="#welcome-section"><span>Port<span style="text-decoration: underline ; color: aliceblue;">Folio</span></span></a>
   </div>
 
   <ul class="nav-list">
@@ -35,7 +47,7 @@
 
 <section id="welcome-section" class="welcome-section">
   <h1>Hello Fsm Club &#128512;</h1>
-  <p>Welcome Every Body </p>
+  <p>Welcome EveryBody </p>
 </section>
 
 <!-- END WELCOME SECTION -->
@@ -47,18 +59,18 @@
 
   <div class="projects-grid">
     <a href="https://google.com/" target="_blank" class="project project-tile">
-      <img class="project-image" src="images/project.jpg" alt="project" />
+      <img class="project-image" src="https://fsm.rnu.tn/useruploads/images/21/logo-think-smart-club.jpg" alt="project" />
       <p class="project-title">
         <span class="code">&lt;</span>
-        Tribute Page
+       Smart Think Club
         <span class="code">&#47;&gt;</span>
       </p>
     </a>
     <a href="https://google.com/" target="_blank" class="project project-tile">
-      <img class="project-image" src="images/project.jpg" width="86" height="37" alt="project" />
+      <img class="project-image" src="https://fsm.rnu.tn/useruploads/images/21/logo-dynamic-fsm-club.png" width="86" height="37" alt="project" />
       <p class="project-title">
         <span class="code">&lt;</span>
-        Random Quote Machine
+      Dynamic Club Group
         <span class="code">&#47;&gt;</span>
       </p>
     </a>
@@ -71,10 +83,10 @@
       </p>
     </a>
     <a href="https://google.com/" target="_blank" class="project project-tile">
-      <img class="project-image" src="images/project.jpg" alt="project" />
+      <img class="project-image" src="https://fsm.rnu.tn/useruploads/gallerie/016355128180-img.jpg" alt="project" />
       <p class="project-title">
         <span class="code">&lt;</span>
-        Map Data Across the Globe
+       Our Group Fsm-Chimie-Club
         <span class="code">&#47;&gt;</span>
       </p>
     </a>
@@ -105,20 +117,27 @@
 <!-- START CONTACT SECTION -->
 
 <section id="contact" class="contact-section">
-  <div class="contact-section-header">
-    <h2>Let's work together...</h2>
-    <p>How do you take your coffee?</p>
-  </div>
-  <div class="contact-links">
-    <a href="#" target="_blank" class="btn contact-details"><i class="fab fa-facebook-square"></i> Facebook</a>
-    <a id="profile-link" href="#" target="_blank" class="btn contact-details"><i class="fab fa-github"></i> GitHub</a>
-    <a href="https://twitter.com/" target="_blank" class="btn contact-details"><i class="fab fa-twitter"></i>
-      Twitter</a>
-    <a href="#" class="btn contact-details"><i class="fas fa-at"></i> Send a mail</a>
-    <a href="#" class="btn contact-details"><i class="fas fa-mobile-alt"></i> Call me</a>
+  
+  <div class="wrapper">
+      <form  id="contactForm">
+      <label for="name">Name</label>
+  
+       <input type="text" id="name" name="name" onkeyup="validateName()">
+        <span id="name-error"></span>
+  
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" onkeyup="validateEmail()">
+      <span id="email-error"></span>
 
-  </div>
-
+      <label for="message">Message</label>
+      <textarea id="message" name="message" onkeyup="validateMessage()"></textarea>
+      <span id="message-error"></span>
+  
+   <button class="submit" value="Submit" id="submit" onclick="return ValidateForm()">Send</button>
+   <span id="submit-error"></span>
+   
+		</form>
+</div>
   <button id="up"
 style="
  background-color:rgb(165, 56, 56);
@@ -135,7 +154,7 @@ style="
 "
 
 
->Up</button>
+    >Up</button>
 
 </section>
 
@@ -143,65 +162,34 @@ style="
 
 <!-- START FOOTER SECTION -->
 
-<footer>
-  <p>
-    **This is just a fake portfolio. All the projects and contact details given
-    are not real.
-  </p>
-  <p>
-    &copy; Created for
-    <a href="https://google.com" target="_blank">freeCoding <i class="fab fa-free-code-camp"></i></a>
-  </p>
-</footer>
+
 
 <!-- END FOOTER SECTION -->
 
 
 
 
+  
+
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-16">
-  <p>Powered by <a href="https://ramijawadi.netlify.app" title="W3.CSS" target="_blank" class="w3-hover-text-green">FSM
-      CLUB</a></p>
+  <p>Powered by  &copy; Created for <a href="https://ramijawadi.netlify.app" title="W3.CSS" target="_blank" class="w3-hover-text-green">FSM
+      CLUB</a>
+     
+      <a href="https://google.com" target="_blank">freeCoding 2024 <i class="fab fa-free-code-camp"></i></a></p>
 </footer>
 
 
-<!-- <script>
+<script>
   function showAlert() {
     alert ("Hello world!");
   }
 
 
-</script> -->
+</script>
 
-<script>
-
-let btn = document.getElementById("up");
-
-/*si hauteur >= 900 px le bouton apparait dans l ecran*/
-
-
-window.onscroll = function () {
-
-  if(window.scrollY >= 900){
-
-    btn.style.display = "block";
-  }else 
-  btn.style.display = "none";
-}
-
-
-/*scroller ver le haut si on click */
-btn.onclick = function () {
-  window.scrollTo ({
-
-    left: 0 ,
-    top:0 ,
-    behavior : "smooth",
-  })
-}
-
+<script src="script.js"> 
 
 
 </script>
